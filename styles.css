@@ -1,0 +1,346 @@
+/* 1. Global styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f9ff;
+    color: #334155;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #164e63;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* 2. Header and navigation */
+.site-header {
+    background-color: #164e63;
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.site-header h1 {
+    color: white;
+    margin: 0;
+    font-size: 26px;
+}
+
+.site-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.site-header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.site-header nav a:hover {
+    color: #a5f3fc;
+    text-decoration: underline;
+}
+
+/* 3. Banner / hero image */
+.hero {
+    min-height: 360px;
+    background-image:
+        linear-gradient(
+            rgba(8, 47, 73, 0.70),
+            rgba(8, 47, 73, 0.70)
+        ),
+        url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    color: white;
+    max-width: 700px;
+}
+
+.hero-content h2 {
+    color: white;
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+}
+
+/* 4. Buttons */
+.btn {
+    display: inline-block;
+    background-color: #0891b2;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 22px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #0e7490;
+}
+
+/* 5. Sections */
+.section {
+    background-color: white;
+    margin: 25px 0;
+    padding: 28px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.section-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+#intro {
+    padding: 25px;
+}
+
+.welcome-message {
+    font-size: 28px;
+}
+
+/* 6. Student profile and circular image */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #a5f3fc;
+    flex-shrink: 0;
+}
+
+/* 7. Cards using CSS Grid */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    background-color: #ecfeff;
+    border: 1px solid #a5f3fc;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.card h3 {
+    margin-top: 8px;
+}
+
+/* Positioned badge inside the card */
+.badge {
+    position: absolute;
+    top: -12px;
+    right: 15px;
+    background-color: #f59e0b;
+    color: #422006;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.cta-section {
+    text-align: center;
+    padding: 35px 20px;
+    background-color: #cffafe;
+    border-radius: 12px;
+    margin: 25px 0;
+}
+
+/* 8. Registration form */
+.form-section {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border: 2px solid #bae6fd;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08);
+}
+
+.registration-form {
+    margin-top: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: #164e63;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    color: #334155;
+    background-color: #fff;
+    border: 1px solid #94a3b8;
+    border-radius: 6px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid #0891b2;
+    outline-offset: 1px;
+    border-color: #0891b2;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group.checkbox-group {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-top: 6px;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    color: #0e7490;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* 9. Thank-you page */
+.thank-you-card {
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 45px 30px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #bbf7d0;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08);
+}
+
+.success-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #dcfce7;
+    color: #15803d;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* 10. Footer */
+.site-footer {
+    background-color: #164e63;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* 11. Responsive design */
+@media (max-width: 700px) {
+    .site-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .site-header nav {
+        justify-content: center;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+
+    .hero {
+        min-height: 300px;
+    }
+}
